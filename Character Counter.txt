@@ -1,0 +1,93 @@
+Index.Html
+
+<div id="container">
+    <h2>Character Counter</h2>
+    <input type="text" id="inp">
+    <button class="p1" onclick="print()">Count</button>
+    <button class="p1" onclick="window.location.reload()">Remove All</button>
+    <ul id="para"></ul>
+  </div>
+
+Style.css
+
+#container{
+    text-align: center;
+    background-color: chartreuse;
+    width: 400px;
+    margin: auto;
+    margin-top: 8%;
+    height: 170px;
+    padding-top: 1%;
+    border-radius: 30px;
+}
+
+
+#para{
+    margin: auto;
+    width: fit-content;
+    margin-top: 20px;
+    color: blue;
+}
+
+
+#inp{
+    background-color: whitesmoke;
+    border: 6px  solid blue;
+    border-radius: 10px;
+    height: 20px;
+    color: darkorange;
+}
+
+
+.p1{
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 80px;
+    height: 30px;
+}
+
+body{
+    background-color: darkgreen;
+}
+
+h2{
+    color: brown;
+}
+
+App.Js
+
+function print(){
+
+  var getInp=document.getElementById("inp")
+  var getPara=document.getElementById("para")
+
+  
+
+var convert=getInp.value.toLowerCase()
+
+var characterscount=0
+
+
+
+for(var i=0;i<getInp.value.length;i++){
+
+  var result=convert[i]
+
+  if(result=="a" || result=="b" ||result=="c" || result=="d" || result=="e" || result=="f"|| result=="g"
+|| result=="h" || result=="i" || result=="j" || result=="k" || result=="l" || result=="m" || result=="n"
+|| result=="o" || result=="p" || result=="q" || result=="r" || result=="s" || result=="t"|| result=="u"
+|| result=="v"  || result=="w" || result=="x" || result=="y" || result==="z"){
+  characterscount++
+}
+
+}
+
+
+getPara.innerHTML=`<li>The total number of character is: ${characterscount}<br></li>`
+
+getInp.value=""
+
+
+}
