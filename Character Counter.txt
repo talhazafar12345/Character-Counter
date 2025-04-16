@@ -85,7 +85,7 @@ for(var i=0;i<getInp.value.length;i++){
 }
 
 
-getPara.innerHTML=`<li>The total number of character is: ${characterscount}<br></li>`
+getPara.innerHTML=`<li>The total numbers of characters are : ${characterscount}<br></li>`
 
 getInp.value=""
 
